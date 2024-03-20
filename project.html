@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>project</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <h1>calculator</h1>
+    <div class="box">
+<form name="f1">
+        <input type="text" id="result" name="textview" >
+        </form>
+        <button onclick="add(1)" value="1">1</button>
+        <button onclick="add(2)" value="2">2</button>
+        <button onclick="add(3)" value="3">3</button>
+        <button onclick="add(4)" value="4">4</button>
+        <button onclick="add(5)" value="5">5</button>
+        <button onclick="add(6)" value="6">6</button>
+        <button onclick="add(7)" value="7">7</button>
+        <button onclick="add(8)" value="8">8</button>
+        <button onclick="add(9)" value="9">9</button>
+        <button onclick="add(0)" value="0">0</button>
+        <button  onclick="eq()" value = "=" >=</button>
+        <button onclick="add('+')">+</button>
+        <button onclick="add('-')">-</button>
+        <button onclick="add('*')">*</button>
+        <button onclick="add('/')">/</button>
+        <button onclick="f1.textview.value=''">C</button>
+       
+    </div>
+    
+    <script>
+function add(i)   
+{  
+document.f1.textview.value=document.f1.textview.value+i;
+}  
+
+function eq()  
+{  
+var p= document.f1.textview.value;  
+if(p)  
+{  
+document.f1.textview.value = eval(p)  
+}  
+}  
+
+function sp()  
+{  
+var p = document.f1.textview.value;  
+document.f1.textview.value = p.substring(0, p.length - 1);   
+}  
+      
+</script>   
+</body>
+</html>
